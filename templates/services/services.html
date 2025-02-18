@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <!-- Navbar -->
+        <nav class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <img class="h-12 w-12" src="/static/img/tesoura.jpg" alt="Logo">
+                            <span class="ml-2 text-xl font-bold">Salão de Beleza</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <a href="/logout" class="text-gray-700 hover:text-gray-900">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-grow">
+            <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h1 class="text-3xl font-bold mb-4">Nossos Serviços</h1>
+                    <p class="text-lg mb-6">Confira os serviços que oferecemos para você:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                            <h2 class="text-xl font-bold mb-2">Corte de Cabelo</h2>
+                            <p>Profissionais qualificados para deixar seu cabelo incrível.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                            <h2 class="text-xl font-bold mb-2">Manicure e Pedicure</h2>
+                            <p>Cuide das suas unhas com nossos serviços de manicure e pedicure.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                            <h2 class="text-xl font-bold mb-2">Tratamentos Faciais</h2>
+                            <p>Revitalize sua pele com nossos tratamentos faciais.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                            <h2 class="text-xl font-bold mb-2">Massagem</h2>
+                            <p>Relaxe e descanse com nossas sessões de massagem.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                            <h2 class="text-xl font-bold mb-2">Maquiagem</h2>
+                            <p>Maquiagem profissional para todas as ocasiões.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                            <h2 class="text-xl font-bold mb-2">Depilação</h2>
+                            <p>Serviços de depilação com cera e laser.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <a href="/dashboard" class="text-indigo-600 hover:text-indigo-500">Voltar para o Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between">
+                    <p class="text-gray-600">&copy; 2025 Salão de Beleza. Todos os direitos reservados.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-gray-900">Termos de Serviço</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">Política de Privacidade</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
