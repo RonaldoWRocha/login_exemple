@@ -58,6 +58,9 @@ class UserModel:
     
     def get_user_by_email(self, email: str):
         return self.db.query(User).filter(User.email == email).first()
+    
+    def get_user_by_username(self, username: str):
+        return self.db.query(User).filter(User.username == username).first()
 
 # Exemplo de uso
 if __name__ == "__main__":

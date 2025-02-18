@@ -15,6 +15,12 @@ def create_users_table():
         )
     ''')
 
+    # Insere o usuário admin por padrão
+    cursor.execute('''
+        INSERT INTO users (username, email, password)
+        VALUES ('admin', 'admin@example.com', 'adminpassword')
+    ''')
+
     # Salva as mudanças e fecha a conexão
     conn.commit()
     conn.close()

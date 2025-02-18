@@ -12,16 +12,21 @@ user_model = UserModel(db)
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        email = request.form.get('email')
+        username_or_email = request.form.get('username_or_email')
         password = request.form.get('password')
         
-        user = user_model.get_user_by_email(email)
+        # Tenta encontrar o usuário pelo nome de usuário ou e-mail
+        user = user_model.get_user_by_username(username_or_email)
+        if not user:
+            user = user_model.get_user_by_email(username_or_email)
+        
         if user and user.password == password:
-            get_flashed_messages()
+            get_flashed_messages()  # Limpa as mensagens flash antigas
+            flash('Login bem-sucedido', 'success')
             return redirect(url_for('dashboard'))
-                
-        flash('Email ou senha inválidos', 'danger')
-        get_flashed_messages()
+        
+        get_flashed_messages()  # Limpa as mensagens flash antigas
+        flash('Usuário ou senha inválidos', 'danger')
     return render_template('index.html')
 
 @auth.route('/register', methods=['GET', 'POST'])
